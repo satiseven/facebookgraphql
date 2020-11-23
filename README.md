@@ -9,5 +9,5 @@
 - Paste the Tokens in usages.php file
 - Run php file - php usage.php -
 
-[APILINK]: <[https://developers.facebook.com/tools/explorer]>
-[GRAPHQL]: <[https://developers.facebook.com/tools/explorer]>
+[apilink]: https://developers.facebook.com/apps/
+[graphql]: https://developers.facebook.com/tools/explorer
