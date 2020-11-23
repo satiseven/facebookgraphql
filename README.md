@@ -4,9 +4,10 @@
 
 # Steps:
 
-- Create API [FACEBOOK API LINK] [APILINK]
-- Get the Token of each api [OPEN GRAPH TOKEN] [GRAPHQL]
+- Create API [FACEBOOK API LINK][apilink]
+- Get the Token of each api [OPEN GRAPH TOKEN][graphql]
 - Paste the Tokens in usages.php file
+- Run php file - php usage.php -
 
 [APILINK]: <[https://developers.facebook.com/tools/explorer]>
 [GRAPHQL]: <[https://developers.facebook.com/tools/explorer]>
