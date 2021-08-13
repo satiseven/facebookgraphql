@@ -1,9 +1,8 @@
 <?php
-require_once 'vendor/autoload.php';
-$connectionParams = array(
-    'dbname' => 'facebook.sqlite',
-    'path' => 'facebook.sqlite',
 
+$connectionParams = array(
+    'path' => '/home/riza/Documents/Projects/PHP/facebookgraphql/facebook.sqlite',
     'driver' => 'pdo_sqlite',
 );
 $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+$queryBuilder = $conn->createQueryBuilder();
