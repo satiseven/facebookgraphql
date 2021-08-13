@@ -23,8 +23,9 @@
             <div class="mb-3">
                 <form action="save.php" method="post">
                     <input type="hidden" value="pro" name="table" />
-                    <label for="exampleFormControlTextarea1" class="form-label">Token Giriniz</label>
-                    <textarea name="slug" class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    <label for="exampleFormControlTextarea1" class="form-label">Ürün Linki Giriniz</label>
+                    <input type="text" name="slug" class="form-control" id="exampleFormControlTextarea1"  />
+
                     <button type="submit" class="btn btn-success">Gönder</button>
                 </form>
 
