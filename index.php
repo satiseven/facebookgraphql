@@ -28,7 +28,8 @@ $stmt = $conn->executeQuery($sql);
             </form>
 
         </div>
-    <table class="table table-striped">
+        <div class="table-responsive">
+    <table class="table table-striped table-responsive">
         <thead>
         <th>Token</th>
         <th>Durum</th>
@@ -38,8 +39,8 @@ $stmt = $conn->executeQuery($sql);
         <?php
 
         while (($row = $stmt->fetchAssociative()) !== false) {
-            ?> <tr><td><?php
-            echo $row['token'];?></td><td><?php echo $row['active']?'Aktif':'kullanilmis'; ?></td><td><a  href="/pages/delete.php?table=tokens&id=<?php echo $row['id']; ?>" class="btn btn-danger">Sil</a></td><?php
+            ?> <tr><td ><textarea rows="3" cols="100"><?php
+            echo $row['token'];?></textarea></td><td><?php echo $row['active']?'Aktif':'kullanilmis'; ?></td><td><a  href="/pages/delete.php?table=tokens&id=<?php echo $row['id']; ?>" class="btn btn-danger">Sil</a></td><?php
         }
         ?>
 
@@ -48,7 +49,7 @@ $stmt = $conn->executeQuery($sql);
         ?>
         </tbody>
     </table>
-</div>
+        </div></div>
 </div>
 </body>
 </html>
