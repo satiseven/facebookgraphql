@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title>Ürünler listesi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <?php
@@ -9,7 +10,9 @@
     $sql = "SELECT * FROM products";
     $stmt = $conn->executeQuery($sql);
     ?>
-    <link href="cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />c
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+    <link href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js" ></script>
 </head>
 
 <body>
@@ -26,7 +29,7 @@
                 </form>
 
             </div>
-            <table class="table table-striped">
+            <table class="table table-striped" id="myTable">
                 <thead>
                     <th>slug</th>
                     <th>durum</th>
@@ -53,5 +56,9 @@
         </div>
     </div>
 </body>
-
+<script>
+    $(document).ready( function () {
+        $('#myTable').DataTable({lang:'tr'});
+    } );
+</script>
 </html>

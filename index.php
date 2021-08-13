@@ -11,6 +11,8 @@ $stmt = $conn->executeQuery($sql);
 
 ?>
 </head>
+<link href="cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet"/>
+<script src="cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js" ></script>
 <body>
 <div class="container">
     <?php require_once 'pages/header.php';?>
