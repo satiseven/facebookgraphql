@@ -1,7 +1,9 @@
 <?php
 require 'FacebookDebugger.php';
-$products = [
-];
+require 'accessTokens.php';
+require 'products.php';
+
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -10,8 +12,7 @@ $counter = 0;
 $fb      = new FacebookDebugger();
 // $fb->reload('https://www.gokcekmarket.com/urun/zerdecal-set-d');
 // $fb->reload('https://www.gokcekmarket.com/urun/zerdecal-set-d');
-$access = [
- ];
+ 
  
 $error       = 0;
 $success     = 0;
@@ -42,7 +43,7 @@ foreach ($products as $product) {
         echo "Token zaman aşamasına uğramış veya kotası dolmuştur \n";
     }
 }
-$myfile = fopen("errorLinks.txt", "w") or die("Unable to open file!");
+$myfile = fopen("errorLinks.txt", "a") or die("Unable to open file!");
 fwrite($myfile,$stringError);
 fclose($myfile);
 echo "**************___[Güncellenen Toplam Ürün Sayısı :" . $success . "___**************]\n\n";
